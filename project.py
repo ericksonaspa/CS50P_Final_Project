@@ -1,5 +1,5 @@
 import ipaddress
-import tabulateo
+import tabulate
 import pyfiglet
 import cowsay
 import sys
