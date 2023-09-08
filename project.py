@@ -1,23 +1,20 @@
 import ipaddress
 import tabulate
 import pyfiglet
-import cowsay
 import sys
 import csv
 import re
-from dinosay import dinoprint, DINO_TYPE
 
 def main():
     try:
         if len(sys.argv) == 1 and sys.argv[0] == "project.py":
 
             #Print ASCII Art
-            result = pyfiglet.figlet_format(text = "IP Subnet Calculator", font = "avatar")
+            result = pyfiglet.figlet_format(text = "IP Subnet Calculator")
             print(result)
 
             ip = input("Enter your IPv4 Address: ")
-            dinoprint(message = f"The network address is {get_netID(ip)}.\nThe broadcast address is {get_broadcastID(ip)}.\nTotal number of hosts is {get_numhosts(ip)}.", body=DINO_TYPE['corythosaur'])
-            cowsay.dragon(f"It's {ip_class(ip)}.\nAlso, it's a {public_or_private(ip)}.")
+            print(f"The network address is {get_netID(ip)}.\nThe broadcast address is {get_broadcastID(ip)}.\nTotal number of hosts is {get_numhosts(ip)}.\nIt's {ip_class(ip)}.\nAlso, it's a {public_or_private(ip)}.")
 
             with open('project.csv', "r", newline='') as file:
                 reader = csv.DictReader(file)
