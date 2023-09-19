@@ -1,8 +1,6 @@
 import ipaddress
 import tabulate
 import pyfiglet
-import cowsay
 import sys
 import csv
 import re
-from dinosay import dinoprint, DINO_TYPE
